@@ -1,33 +1,20 @@
 package cn.mzzxr.javaall.designmode.singleton.po;
 
-import java.util.function.Supplier;
-
 /**
- * @Description 单例模式-饿狼
+ * @Description 饿汉式
  * @Author LG
- * @Date 2019/6/24 12:26
+ * @Date 2019/7/20 23:43
  **/
 public class HungryWolf {
+    /**
+     * (1) 构造器私有化
+     * (2) 自行创建，并且静态变量保存
+     * (3) 向外提供这个实例
+     * (4) 强调这是一个单例，我们可以用final修改
+     */
 
-    private String name;
+    public static final HungryWolf INSTANCE = new HungryWolf();
 
-    private static HungryWolf wolf = new HungryWolf();
-
-    private HungryWolf() {}
-
-    public static HungryWolf getHungryWolf() {
-        return wolf;
-    }
-
-    public void say(Supplier<String> supplier) {
-        System.out.println(supplier.get());
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    private HungryWolf() {
     }
 }
