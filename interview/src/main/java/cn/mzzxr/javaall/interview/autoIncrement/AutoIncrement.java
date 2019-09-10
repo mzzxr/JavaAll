@@ -1,9 +1,9 @@
-package cn.mzzxr.javaall.interview;
+package cn.mzzxr.javaall.interview.autoIncrement;
 
 import org.junit.Test;
 
 /**
- * @Description TODO
+ * @Description 自增面试题
  * @Author LG
  * @Date 2019/7/1 21:37
  **/
