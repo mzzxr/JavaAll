@@ -1,8 +1,9 @@
 package cn.mzzxr.javaall.designmode.singleton;
 
 import cn.mzzxr.javaall.designmode.singleton.po.EnumWolf;
-import cn.mzzxr.javaall.designmode.singleton.po.LazyWolf;
 import org.junit.Test;
+
+import cn.mzzxr.javaall.designmode.singleton.po.*;
 
 /**
  * @Description 单例模式练习
@@ -21,9 +22,20 @@ public class BootSingleton {
     }
 
     @Test
+    public void testHungryWolf() {
+        HungryWolf wolf = HungryWolf.INSTANCE;
+        System.out.println(wolf);
+    }
+
+    @Test
     public void testEnumWolf() {
         EnumWolf wolf = EnumWolf.WOLF;
         System.out.println(wolf);
     }
 
+    @Test
+    public void testStaticWolf() {
+        StaticWolf wolf = StaticWolf.INSTANCE;
+        System.out.println(wolf);
+    }
 }
